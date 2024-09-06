@@ -1,0 +1,11 @@
+      .allres2{
+            width: 650px;
+           margin-left: 350px;
+        }
+        header{
+            text-align: center;
+            font-size: 26px;
+        }
+        .allres2 h2{
+            text-decoration: underline;
+        }

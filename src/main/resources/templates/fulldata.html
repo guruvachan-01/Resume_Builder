@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts - inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- custom css -->
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/res.css}">
+</head>
+<body>
+ <!-- start navbar -->
+ 
+        
+        <nav class = "navbar navbar-expand-lg  " style="  background-color: #e7eefa!important; box-shadow: 3px 4px 5px 6px midnightblue;">
+            <div class="container">
+                <a class = "navbar-brand fw-bold fs-2" href = "index.html">
+                    <span>
+                        <i class = "fa-solid fa-file-invoice"></i>
+                    </span>
+                    <span class = "navbar-brand-text">Build</span> CV
+                </a>
+                <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navbarContent" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+ 
+
+                <div class = "collapse navbar-collapse" id = "navbarContent">
+                    <ul class = "navbar-nav ms-auto">
+                        <li><a href="/" style="text-decoration: none; color: rgb(0, 128, 255); font-size: 24px; font-weight: bold; ">Home</a></li>
+                      
+                     <li>   <button type = "resume" class = "btn btn-login btn-primary ms-lg-4 px-4 fs-18 mt-3 mt-lg-0" ><a href="userDetails" style="height: 30px; text-decoration: none; ">User Details</a></button></li>
+                   
+                    </ul>
+         
+
+
+                </div>
+            </div>
+        </nav>
+
+ <div class="data" style="background-color:  steelblue">
+	 <th:block th:if="${session.msg}">
+							<p class="text-center text-success fs-4">[[${session.msg}]]</p>
+							<th:block th:text="${@userServiceImpl.removeSessionMessage()}"></th:block>
+
+						</th:block>
+
+	 <div class="container" >
+		 <form class="row g-3" th:action="@{/user/save}" method="post">
+			
+			 <div class="row g-3">
+				  <div class = "container">
+                <div class = "row section-title text-center mb-10">
+                    <div class = "col-12 pt-10">
+                        <h2 class = "display-6 text-blue fw-bold">Here are the Best Templates for you</h2>
+                        <p class = "text-grey fs-4 my-4 mx-auto">A great job application leads to a good interview. An amazing resume is what makes it all possible.</p>
+                    </div>
+                </div>
+ </div>
+
+  <div class="col">
+	   <label for="inputEmail4" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Name</label>
+    <input type="text" name="name" class="form-control" placeholder="First name" aria-label="First name" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  <div class="col">
+	   <label for="inputEmail4" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Phone Number</label>
+    <input type="text" name="mobile" class="form-control" placeholder="Phone number" aria-label="Last name" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+</div>
+  <div class="col-md-6" style="width: 370px;">
+    <label for="inputEmail4" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Email</label>
+    <input type="email" name="email" class="form-control" placeholder="Email" id="inputEmail4" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  <div class="col-md-2" style="width: 370px;">
+    <label for="inputZip" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Date of Birth</label>
+    <input type="date" name="date" class="form-control" id="inputDate" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  <div class="col-md-6" style="width: 378px;">
+    <label for="inputPassword4" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Linkedin</label>
+    <input type="text" name="linkden" class="form-control" placeholder="Linkedin" id="inputPassword4" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Mother Name</label>
+    <input type="text" name="mother" class="form-control" placeholder="Mother name" id="inputEmail4" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Father Name</label>
+    <input type="text" name="father" class="form-control" placeholder="Father name" id="inputPassword4" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  <div class="col-12">
+    <label for="inputAddress" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Address</label>
+    <input type="text" name="address" class="form-control" id="inputAddress" placeholder="1234 Main St" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  
+  <div class="col-md-6">
+    <label for="inputCity" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">City</label>
+    <input type="text" name="city" class="form-control" placeholder="City" id="inputCity" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  <div class="col-md-4">
+    <label for="inputState" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">State</label>
+    <select id="inputState" name="state" class="form-select" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+       <option>Agra</option>
+        <option value="">Aligrah</option>
+        <option value=""> Prayagraj</option>
+        <option value="">Ambedhker Nagar</option>
+        <option value="">Amethi</option>
+        <option value="">Amroha</option>
+        <option value="">Auraiya</option>
+        <option value="">Azamgrah</option>
+        <option value=""> Baghpat</option>
+        <option value="">Bahraich</option>
+        <option value="">Ballia</option>
+        <option value="">Balrampur</option>
+        <option value="">Banda</option>
+        <option value="">Barabanki</option>
+        <option value="">Bareilly</option>
+        <option value=""> Basti</option>
+        <option value="">Bhadohi</option>
+        <option value="">Bijnor</option>
+        <option value="">Budaun</option>
+        <option value="">Bulandshahr</option>
+        <option value="">Chandauli</option>
+        <option >Chitrakoot</option>
+        <option >Deoria</option>
+        <option >Etah</option>
+        <option >Etawah</option>
+        <option >Ayodhya</option>
+        <option >Farrukhabad</option>
+          <option >Fatehpur</option>
+            <option >Firozabad</option>
+            <option >Gautam Buddha Nagar</option>
+            <option >Ghazipur</option>
+            <option >Gonda</option>
+            <option >Gorakhpur</option>
+            <option >Hamipur</option>
+            <option >Hapur</option>
+            <option >Hardoi</option>
+            <option >Hathras</option>
+            <option >Jalaun</option>
+            <option >Jaunpur</option>
+            <option >Jhansi</option>
+            <option >Kannauj</option>
+            <option >Kanpur Dehat</option>
+            <option >kanpur Nager</option>
+            <option >Kasganj</option>
+            <option >kaushambi</option>
+            <option >Kheri</option>
+            <option >Kushinagar</option>
+            <option >Lalitpur</option>
+            <option >Lucknow</option>
+            <option >Maharajganj</option>
+            <option >Mohoba</option>
+            <option >Mainpuri</option>
+            <option >Mathura</option>
+            <option >Mau</option>
+            <option >Meerut</option>
+            <option >Mirzapur</option>
+            <option >Moradabad</option>
+            <option >Muzaffarnagar</option>
+            <option >Pilibhit</option>
+            <option >Pratapgarh</option>
+            <option >Raebareli</option>
+            <option >Rampur</option>
+            <option >Saharanpur</option>
+            <option >Sambhal</option>
+            <option >Sant Kabir Nagar</option>
+            <option >Shahjahanpur</option>
+            <option >Shamli</option>
+            <option >Shravasti</option>
+            <option >Siddharthnagar</option>
+            <option >Sitapur</option>
+            <option >Sonbhadra</option>
+            <option >Sultanpur</option>
+            <option >Unnao</option>
+            <option >Varanasi</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="inputZip" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Zip</label>
+    <input type="number" name="pin" class="form-control" id="inputZip" placeholder="ZIP" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+
+<div class="flex md:flex-row flex-col gap-10">
+<div class="personal col-md-6">
+	 
+   <div class="col">
+	    <label for="inputAddress" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Skills</label>
+   </div>
+   <textarea class="w-full" name="skills" id="1" placeholder="please give your Skills here" rows="3" style=" display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+
+    </textarea>
+  
+  
+    
+   <div class="col">
+	    <label for="inputAddress" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Objectives</label>
+   </div>
+   <textarea class="w-full" name="objtive" id="1" placeholder="please give your objective summary here" rows="3" style=" display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+
+    </textarea>
+
+</div>
+
+<div class="personal col-md-6" >
+	 
+   <div class="col">
+	    <label for="inputAddress" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Achivements</label>
+   </div>
+   <textarea class="w-full " name="achivement" id="1" placeholder="please give your Skills here" rows="3" style=" display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+
+    </textarea>
+  
+  
+    
+   <div class="col">
+	    <label for="inputAddress" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Projectes</label>
+   </div>
+   <textarea class="w-full " name="project" id="1" placeholder="please give your objective summary here" rows="3" style=" display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+
+    </textarea>
+
+</div>
+</div>
+  
+   <div class="col-md-6" style="width: 282px;">
+    <label for="inputEmail4" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">High School Marks</label>
+    <input type="text" name="tenthmarks" class="form-control" placeholder="10th marks" id="inputEmail4" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  <div class="col-md-2" style="width: 282px;">
+    <label for="inputZip" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Intermediate Marks</label>
+    <input type="text" name="tewltmarks" class="form-control" placeholder="12th marks" id="inputDate" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  <div class="col-md-6" style="width: 282px;">
+    <label for="inputPassword4" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Graduation Marks</label>
+    <input type="text" name="degree_marks" class="form-control" placeholder="Graduation marks" id="inputPassword4" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  <div class="col-md-6" style="width: 282px;">
+    <label for="inputPassword4" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Graduated Course</label>
+    <input type="text" name="degreename" class="form-control" placeholder="Graduation marks" id="inputPassword4" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  
+  
+     <div class="col-md-6" style="width: 372px;">
+    <label for="inputEmail4" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">High School Name</label>
+    <input type="text" name="shlname1" class="form-control" placeholder="10th school name" id="inputEmail4" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  <div class="col-md-2" style="width: 372px;">
+    <label for="inputZip" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Intermediate School Name</label>
+    <input type="text" name="shlname2" class="form-control" placeholder="12th School name" id="inputDate" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  <div class="col-md-6" style="width: 380px;">
+    <label for="inputPassword4" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">College/University Name</label>
+    <input type="text" name="U_name" class="form-control" placeholder="College/University name" id="inputPassword4" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  
+    <div class="col-md-6" style="width: 372px;">
+    <label for="inputEmail4" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Experience</label>
+    <input type="text" name="expe" class="form-control" placeholder="Experience duration time"style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;" >
+  </div>
+  <div class="col-md-2" style="width: 372px;">
+    <label for="inputZip" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Campany name</label>
+    <input type="text" name="C_name" class="form-control" placeholder="Campany name" id="inputDate" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  <div class="col-md-6" style="width: 380px;">
+    <label for="inputPassword4" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Location</label>
+    <input type="text" name="joblocation" class="form-control" placeholder="Job location" id="inputPassword4" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+  
+  
+  
+   <div class="col-12">
+    <label for="inputAddress" class="form-label" style="color: rgb(0, 64, 128); font-size: large;">Hobbies</label>
+    <input type="text" name="hobbis" class="form-control" id="inputAddress" placeholder="Hobby....." style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px;">
+  </div>
+
+  <div class="col-12">
+   <div class="container text-center mt-4 mb-4">
+							<button class="btn btn-primary btn-block" style="width: 120px;">Submit</button>
+							<button type="reset" class="btn btn-warning btn-block text-white" style="width: 120px;">Reset</button>
+							</div>
+  </div>
+</form>
+	 </div>
+ </div>
+ 
+  <footer class = "pt-5">
+        <div class = "container my-4">
+            <div class = "row gy-5 gx-md-5 text-center text-md-start">
+                <div class = "col-md-6 col-xl-4">
+                    <a class = "site-logo text-decoration-none fw-bold fs-2" href = "#">
+                        <span>
+                            <i class = "fa-solid fa-file-invoice"></i>
+                        </span>
+                        <span class = "site-logo-text">Build</span> CV
+                    </a>
+                    <p class = "text-grey fs-18 mt-4">Build CV is a CV builder that helps users like you to create stunning CVs within 4 minutes</p>
+                </div>
+
+                <div class = "col-md-6 col-xl-2">
+                    <h3 class = "text-blue">Build CV</h3>
+                    <ul class = "list-unstyled mt-4">
+                        <li class = "my-2">
+                            <a href = "#" class = "text-decoration-none fs-17 text-dark">Homepage</a>
+                        </li>
+                        <li class = "my-2">
+                            <a href = "#" class = "text-decoration-none fs-17 text-dark">CV Builder</a>
+                        </li>
+                        <li class = "my-2">
+                            <a href = "#" class = "text-decoration-none fs-17 text-dark">CV Templates</a>
+                        </li>
+                        <li class = "my-2">
+                            <a href = "#" class = "text-decoration-none fs-17 text-dark">Login</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-xl-2">
+                    <h3 class = "text-blue">Legal</h3>
+                    <ul class = "list-unstyled mt-4">
+                        <li class = "my-2">
+                            <a href = "#" class = "text-decoration-none fs-17 text-dark">Privacy Policy</a>
+                        </li>
+                        <li class = "my-2">
+                            <a href = "#" class = "text-decoration-none fs-17 text-dark">Use of Terms</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-xl-4">
+                    <h3 class = "text-blue">Help Center</h3>
+                    <p class = "fs-17 mt-3">Contact: <a href = "mailto:guruvachanindian@gmail.com" class="text-decoration-none text-blue">support@guruvachanindian@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class = "container-fluid copyright-text pt-4 pb-3">
+            <p class = "text-center fw-3">&copy; 2024 BuildCv. All rights reserved</p>
+        </div>
+    </footer>
+
+ 
+  <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	>
+<head>
+<meta charset="ISO-8859-1">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts - inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- custom css -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" th:href="@{/css/res.css}">
+<title>Insert title here</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+	crossorigin="anonymous">
+</head>
+<body>
+	<!-- start navbar -->
+ <nav class = "navbar navbar-expand-lg  " style="  background-color: #e7eefa!important; box-shadow: 3px 4px 5px 6px midnightblue;">
+            <div class="container">
+                <a class = "navbar-brand fw-bold fs-2" href = "index.html">
+                    <span>
+                        <i class = "fa-solid fa-file-invoice"></i>
+                    </span>
+                    <span class = "navbar-brand-text">Build</span> CV
+                </a>
+                <button class = "navbar-toggler" type = "button" data-bs-toggle = "collapse" data-bs-target = "#navbarContent" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+ 
+
+                <div class = "collapse navbar-collapse" id = "navbarContent">
+                    <ul class = "navbar-nav ms-auto">
+                        <li><a href="/" style="text-decoration: none; color: rgb(0, 128, 255); font-size: 24px; font-weight: bold; ">Home</a></li>
+                     <li>   <button type = "button" class = "btn btn-login btn-primary ms-lg-4 px-4 fs-18 mt-3 mt-lg-0" ><a href="user_profile" style="height: 30px; text-decoration: none; ">Profile</a></button></li>
+                    </ul>
+             
+
+
+                </div>
+            </div>
+        </nav>
+
+<!--        templates select-->
+  <section class = "templates py-8 bg-secondary">
+            <div class = "container">
+                <div class = "row section-title text-center mb-5">
+                    <div class = "col-12">
+                        <h2 class = "display-6 text-blue fw-bold">Here are the Best Templates for you</h2>
+                        <p class = "text-grey fs-4 my-4 mx-auto">A great job application leads to a good interview. An amazing resume is what makes it all possible.</p>
+                    </div>
+                </div>
+
+
+<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class = "row templates-list gy-5 gx-lg-5">
+                    <div class = "templates-item position-relative col-lg-6">
+                        <div class = "template-item-img mx-auto me-lg-0 position-relative">
+                            <img th:src = "@{/Images/resume11.png}" alt = "" class = "img-fluid">
+                            <a href = "fulldata" class = "btn btn-lg btn-primary position-absolute choose-template-btn">Select Template</a>
+                        </div>
+                    </div>
+
+                    <div class = "templates-item position-relative col-lg-6">
+                        <div class = "template-item-img mx-auto ms-lg-0 position-relative">
+                            <img th:src = "@{/Images/resume12.png}" alt = "/" class = "img-fluid" style="height: 490px;">
+                            <a href = "fulldata" class = "btn btn-lg btn-primary position-absolute choose-template-btn">Select Template</a>
+                        </div>
+                    </div>
+                </div>
+     
+    </div>
+    <div class="carousel-item">
+      <div class = "row templates-list gy-5 gx-lg-5">
+                    <div class = "templates-item position-relative col-lg-6">
+                        <div class = "template-item-img mx-auto me-lg-0 position-relative">
+                            <img th:src = "@{/Images/resume13.png}" alt = "" class = "img-fluid">
+                            <a href = "fulldata" class = "btn btn-lg btn-primary position-absolute choose-template-btn">Select Template</a>
+                        </div>
+                    </div>
+
+                    <div class = "templates-item position-relative col-lg-6">
+                        <div class = "template-item-img mx-auto ms-lg-0 position-relative">
+                            <img th:src = "@{/Images/resume14.png}" alt = "/" class = "img-fluid" style="height: 500px;">
+                            <a href = "fulldata" class = "btn btn-lg btn-primary position-absolute choose-template-btn">Select Template</a>
+                        </div>
+                    </div>
+                </div>
+     
+    </div>
+    <div class="carousel-item">
+     <div class = "row templates-list gy-5 gx-lg-5">
+                    <div class = "templates-item position-relative col-lg-6">
+                        <div class = "template-item-img mx-auto me-lg-0 position-relative">
+                            <img th:src = "@{/Images/resume15.png}" alt = "" class = "img-fluid" style="height: 490px;">
+                            <a href = "fulldata" class = "btn btn-lg btn-primary position-absolute choose-template-btn">Select Template</a>
+                        </div>
+                    </div>
+
+                    <div class = "templates-item position-relative col-lg-6">
+                        <div class = "template-item-img mx-auto ms-lg-0 position-relative">
+                            <img th:src = "@{/Images/resume11.png}" alt = "/" class = "img-fluid">
+                            <a href = "fulldata" class = "btn btn-lg btn-primary position-absolute choose-template-btn">Select Template</a>
+                        </div>
+                    </div>
+                </div>
+ 
+    </div>
+  </div>
+  
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+      
+
+               
+            </div>
+        </section>
+	
+	 <footer class = "pt-5">
+        <div class = "container my-4">
+            <div class = "row gy-5 gx-md-5 text-center text-md-start">
+                <div class = "col-md-6 col-xl-4">
+                    <a class = "site-logo text-decoration-none fw-bold fs-2" href = "#">
+                        <span>
+                            <i class = "fa-solid fa-file-invoice"></i>
+                        </span>
+                        <span class = "site-logo-text">Build</span> CV
+                    </a>
+                    <p class = "text-grey fs-18 mt-4">Build CV is a CV builder that helps users like you to create stunning CVs within 4 minutes</p>
+                </div>
+
+                <div class = "col-md-6 col-xl-2">
+                    <h3 class = "text-blue">Build CV</h3>
+                    <ul class = "list-unstyled mt-4">
+                        <li class = "my-2">
+                            <a href = "#" class = "text-decoration-none fs-17 text-dark">Homepage</a>
+                        </li>
+                        <li class = "my-2">
+                            <a href = "#" class = "text-decoration-none fs-17 text-dark">CV Builder</a>
+                        </li>
+                        <li class = "my-2">
+                            <a href = "#" class = "text-decoration-none fs-17 text-dark">CV Templates</a>
+                        </li>
+                        <li class = "my-2">
+                            <a href = "#" class = "text-decoration-none fs-17 text-dark">Login</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-xl-2">
+                    <h3 class = "text-blue">Legal</h3>
+                    <ul class = "list-unstyled mt-4">
+                        <li class = "my-2">
+                            <a href = "#" class = "text-decoration-none fs-17 text-dark">Privacy Policy</a>
+                        </li>
+                        <li class = "my-2">
+                            <a href = "#" class = "text-decoration-none fs-17 text-dark">Use of Terms</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class = "col-md-6 col-xl-4">
+                    <h3 class = "text-blue">Help Center</h3>
+                    <p class = "fs-17 mt-3">Contact: <a href = "mailto:guruvachanindian@gmail.com" class="text-decoration-none text-blue">support@guruvachanindian@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class = "container-fluid copyright-text pt-4 pb-3">
+            <p class = "text-center fw-3">&copy; 2024 BuildCv. All rights reserved</p>
+        </div>
+    </footer>
+
+
+
+	 <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+</body>
+</html>
+

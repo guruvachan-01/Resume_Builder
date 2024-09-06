@@ -1,0 +1,73 @@
+    *{
+    padding: 0px;
+    margin: 0px;
+}
+.outer{
+    width: 700px;
+    height: 1200px;
+    border: 1px solid rgb(23, 180, 241);
+    margin: 0px auto;
+    background: rgb(185, 224, 246);
+}
+
+.left-container{
+    width: 350px;
+    height: 1000px;
+   
+    margin-top: 30px;
+    float: left;
+}
+
+h2{
+    color: rgb(14, 78, 241);
+    margin-top: 2px;
+}
+
+.guru{
+   float: left;
+   width: 50%;
+  
+  
+}
+.vachan{
+    float: right;
+    width: 50%;
+}
+hr{
+    width: 100%;
+    height: 2px;
+    background-color: rgb(21, 94, 250);
+    
+}
+.line{
+    margin-top: 80px;
+    
+}
+#pro{
+    color: rgb(12, 138, 235);
+}
+
+.right-container{
+    width: 300px;
+    height: 800px;
+    
+    margin-top: 70px;
+    float: right;
+}
+#loc{
+    margin-top: 65px;
+    margin-left: 30px;
+}
+.line2{
+    margin-top: 63px;
+}
+
+.line3, .line4{
+    margin-top: 40px;
+}
+.list{
+    margin-left: 20px;
+}
+#red{
+    color: rgb(6, 74, 142);
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" th:href="@{/css/resfipty.css}">
+</head>
+<body>
+	<button class="btn btn-outline-primary" onclick="print()"
+					style="width: 80px; margin-left: 990px;margin-top: 10px; color: rgb(0, 0, 64);">Print</button>
+   
+ <div class="top">
+        <h1>CURRICULUM VITAE</h1>
+        <div class="menu">
+            <span class="con">
+                <p>Contact:[[${res.mobile}]]</p>
+                <p>State:[[${res.state}]]</p>
+                <p>ZIP:[[${res.pin}]]</p>
+            </span>
+
+            <h3>Name:[[${res.name}]]<br></h3>
+            <p>Email:[[${res.email}]]</p>
+            <p>Linkedin:[[${res.linkden}]]</p>
+
+
+           
+        </div>
+        
+        <div class="obj">
+            <h3>Objective</h3>
+            <p>[[${res.objtive}]]</p>
+        </div>
+        
+        <div class="ed">
+            <h3>Education</h3>
+             <p> <b>School Name: X</b>  <ul>
+				
+                <li> [[${res.shlname1}]]</li>
+                <li>[[${res.tenthmarks}]]</li>
+            </ul> </p>
+            <p> <b>School Name: XII(Higher Secondary)</b>  <ul>
+				
+                <li> [[${res.shlname2}]]</li>
+                <li>[[${res.tewltmarks}]]</li>
+            </ul> </p>
+            <p> <b>Graduation Course: </b>  <ul>
+				
+                <li> [[${res.degreename}]] From [[${res.U_name}]]</li>
+                <li>[[${res.degree_marks}]]</li>
+            </ul> </p>
+        </div>
+        
+        <div class="exp">
+<h3>Professional Experience</h3>
+<ul>
+    <li> <p>Experienced Job:[[${res.C_name}]]</p>
+</li>
+    <p>JobLocation:[[${res.joblocation}]]</p>
+</ul>
+        </div>
+        <div class="skills">
+            <h3>Projects</h3>
+            <ul>
+                 <li> [[${res.project}]]</li>
+            </ul>
+                    </div>
+        <div class="skills">
+            <h3>Professional Skills</h3>
+            <ul>
+                 <li> [[${res.skills}]]</li>
+            </ul>
+                    </div>
+                    
+                    <div class="str">
+                        <h3>Interest and Hobbies</h3>
+                        <ul>
+                              <li> [[${res.hobbis}]]</li>
+                        </ul>
+                                </div>
+                                
+    </div>
+</body>
+</html>

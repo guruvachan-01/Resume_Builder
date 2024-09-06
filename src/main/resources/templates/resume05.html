@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    
+    
+    <title>Resume</title>
+  
+    
+    <link rel="stylesheet" th:href="@{/css/resfive.css}">
+</head>
+<body>
+	<button class="btn btn-outline-primary" onclick="print()"
+					style="width: 80px; margin-left: 990px;margin-top: 10px; color: rgb(0, 0, 64);">Print</button>
+   
+    <div class="msg">
+        
+<h1>STUDENT CV</h1>
+<h3>BY RESUME GENIUS</h3>
+
+<div class="obj">
+    <p>
+		[[${res.objtive}]]
+    </p>
+    <br>
+     <h3>Personal Information</h3>
+    <br>
+    <h4>Name:[[${res.name}]]</h4> <h4>Linkedin:[[${res.linkden}]]</h4>
+    <br>
+    <br>
+    <h4>Email:[[${res.email}]]</h4> <h4>Address:[[${res.address}]]</h4>
+    <br>
+    <br>
+    <h4>Contact:[[${res.mobile}]]</h4> <h4>ZIP:[[${res.pin}]]</h4>
+</div>
+<br>
+<br>
+<hr>
+<div class="ed">
+    <h3>Eduction</h3>
+    <b>High School Passed:</b> - <p><br>
+        School Name: [[${res.shlname1}]]</p>
+        <p><br>
+        High School Marks: [[${res.tenthmarks}]]</p>
+        <br>
+         <b>Senior Secondry School Passed:</b> - <p><br>
+        School Name: [[${res.shlname2}]]</p>
+        <p><br>
+        Senior Secondry School Marks: [[${res.tewltmarks}]]</p>
+          <p><br>
+        Graduated Course: [[${res.degreename}]] from [[${res.U_name}]]</p>
+        <p><br>
+        CGPA: [[${res.degree_marks}]]</p>
+</div>
+<br>
+<br>
+<hr>
+<div class="work">
+    <h3>Projects</h3>
+    <b>Building a Project:[[${res.project}]]</b> 
+   
+       
+</div>
+<br>
+<br>
+<hr>
+<div class="work">
+    <h3>Work Experience</h3>
+    <b>Campany Name:[[${res.C_name}]]</b> <br><br>
+    <p>Location:[[${res.joblocation}]]</p>
+       
+</div>
+<br>
+<br>
+<hr>
+<div class="skills">
+    <h3>Skills</h3>
+    
+    <ul>
+        <li>[[${res.skills}]]</li>
+    </ul>
+       
+</div>
+<br>
+<br>
+<hr>
+<div class="hoby">
+    <h3>Strengths</h3>
+    
+    <ul>
+        <li>[[${res.hobbis}]]</li>
+    </ul>
+       
+       
+</div>
+    </div>
+
+
+</body>
+</html>

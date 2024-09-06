@@ -1,0 +1,29 @@
+    *{padding: 0px;
+margin: 0px;
+}
+.outer{
+    height: 900px;
+    width: 700px;
+    
+    margin: 0px auto;
+}
+.outer h3{
+    text-align: center;
+}
+.title{
+    text-align: center;
+    margin-top: 40px;
+    background-color: rgb(0, 122, 170);
+    color: white;
+}
+.info{
+    margin-top: 30px;
+}
+h3{
+  
+    background-color: rgb(14, 153, 239);  
+}
+.add{
+    margin-left: 20px;
+    margin-top: 15px;
+}

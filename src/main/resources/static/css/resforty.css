@@ -1,0 +1,23 @@
+ .top{
+            width: 650px;
+           margin-left: 350px;
+      border: 3px solid rgb(7, 87, 234);
+      padding: 15px 15px ;
+        }
+        .top h1{
+            text-align: center;
+            background: blue;
+            color: white;
+        }
+        hr{
+            height: 3px;
+            background: rgb(22, 66, 242);
+        }
+        .top .menu .con{
+  padding-right: 74px;
+    margin-top: 2px;
+    float: right;
+        }
+        .menu{
+            padding-bottom: 6px;
+        }

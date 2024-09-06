@@ -1,0 +1,38 @@
+  .outer{
+    width: 700px;
+    height: 1000px;
+    
+    margin: 0px auto;
+    
+    }
+   hr{
+   background: rgb(22, 178, 239);
+    height: 3px;
+   }
+#std{
+    font-weight: 100; 
+}
+
+#line{
+
+   background-color: rgb(22, 178, 239);
+    width: 700px;
+    height: 47px;
+    margin:auto;
+    text-align: center;
+  
+
+
+}
+
+h2{
+    
+    color: rgb(59, 252, 252);
+   
+}
+
+span{
+    font-style: italic;
+    color: rgb(27, 241, 248);
+
+}

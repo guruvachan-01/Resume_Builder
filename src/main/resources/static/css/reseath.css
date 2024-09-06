@@ -1,0 +1,41 @@
+  .top {
+            width: 650px;
+           margin-left: 350px;
+        }
+        .top h1{
+            text-align: center;
+            background: rgb(128, 128, 64);
+
+        }
+        .top hr{
+            height: 2px;
+            background: black;
+        }
+        .top  h4{
+            font-size: 26px;
+
+        }
+        .top h5{
+            font-size: 15px;
+            line-height: 4px;
+        }
+        .obj h3{
+            background: gray;
+            border:  3px solid black;
+            padding: 5px 5px 5px;
+        }
+        .acd h3 {
+            background: gray;
+            border:  3px solid black;
+            padding: 5px 5px 5px;
+        }
+        .skills h3 {
+            background: gray;
+            border:  3px solid black;
+            padding: 5px 5px 5px;
+        }
+        .hoby h3 {
+            background: gray;
+            border:  3px solid black;
+            padding: 5px 5px 5px;
+        }

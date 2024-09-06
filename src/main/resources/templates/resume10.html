@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" th:href="@{/css/resten.css}">
+</head>
+<body>
+	<button class="btn btn-outline-primary" onclick="print()"
+					style="width: 80px; margin-left: 990px;margin-top: 10px; color: rgb(0, 0, 64);">Print</button>
+   
+   <div class="outer">
+        <div class="container">
+<h3>[[${res.name}]]</h3>
+   
+    <div class="col-right">
+        Address:[[${res.address}]],State:[[${res.state}]]<br>
+        <br>
+        City:[[${res.city}]]<br>
+        Cell no: [[${res.mobile}]]<br>
+        E-Mail:[[${res.email}]]
+    </div>
+    </div>
+    <div class="line">
+        
+    </div>
+    <h3>CARRIER OBJECTIVE</h3><br>
+    <p>[[${res.objtive}]]
+    </p>
+    <h3>EDUCATIONAL QUALIFICATION</h3><br>
+    <table border="1px" >
+        <tr>
+            <th>Qualification</th>
+            <th>Insititute</th>
+            
+            <th>Percentage(%)</th>
+        </tr>
+        <tr>
+            <td>[[${res.degreename}]]
+            </td>
+           
+            <td>[[${res.U_name}]]</td>
+           
+            <td>[[${res.degree_marks}]]</td>
+        </tr>
+        <tr><td>XII(Higher Secondary)</td>
+            <td>[[${res.shlname1}]]</td>
+            
+            <td>[[${res. tewltmarks}]]</td>
+        </tr>
+        <tr><td>X</td>
+            <td>[[${res. shlname2}]]</td>
+            
+          
+            <td>[[${res.tenthmarks}]]</td>
+        </tr>
+    </table>
+    <h3>CERTIFICATIONS</h3>
+    <ul>
+        <li>[[${res. achivement}]]</li>
+        
+    </ul>
+    <h3>Strength</h3>
+    <ul>
+        <li>[[${res.hobbis}]]</li>
+        
+    </ul>
+</div>
+
+</body>
+</html>

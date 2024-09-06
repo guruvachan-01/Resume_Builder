@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html  lang="en" xmlns:th="https://www.thymeleaf.com">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google fonts - inter font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- custom css -->
+     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  
+<link rel="stylesheet" th:href="@{/css/res.css}">
+</head>
+<body>
+ <!-- start navbar -->
+ <nav class = "navbar navbar-expand-lg  " style="  background-color: #e7eefa!important; box-shadow: 3px 4px 5px 6px midnightblue;">
+            <div class="container">
+                <a class = "navbar-brand fw-bold fs-2" href = "index.html">
+                    <span>
+                        <i class = "fa-solid fa-file-invoice"></i>
+                    </span>
+                    <span class = "navbar-brand-text">Build</span> CV
+                </a>
+              
+<!--  <input type="text" name="search" class="form-control" placeholder="Search User...." id="inputEmail4" style="display: flex; border: 3px solid rgb(0, 64, 128); border-radius: 10px; width: 440px; padding-left: 12px; margin-left: 322px;">-->
+<!--<form th:action="@{/user/filterper}" method="get">-->
+<!--					<input id="textSearch" type="text" placeholder="User Search..." name="keyword" style="height: 5vh; width: 43vw; margin-bottom:5px; margin-left: 97px; font-size: 20px; border: 2px solid dodgerblue; border-radius: 4px;">-->
+<!--					<button class="btn btn-primary" type="submit" style="width: 7vw; margin-bottom: 4px; margin-left: 11px; ">Search</button>-->
+<!--				</form>-->
+
+              
+            </div>
+        </nav>
+        
+           
+        
+<div class="view">
+	<table class="table" style="border: 4px darkblue; ">
+
+						<tr th:each="stp: ${res}">
+
+<!--  cards-->
+<nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+  <a class="navbar-brand" href="#" style="font-size: 24px; font-weight: bold;">University Level</a>
+
+</nav>
+ <main class="container mx-auto px-4 py-2 ">
+        
+<!--university level-->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white rounded-lg p-6   shadow-2xl  ">
+                <img th:src = "@{/Images/resume4.jpg}" alt="Free Shipping" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Fresher Template</h2>
+                <p class="text-gray-600">Design Stunning Resume With Customizable Templates & Thousands Of Graphics. Create Design. Real-Time Collaboration.</p>
+           <a class="btn btn-sm btn-primary" th:href="@{'/user/resume01/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6 shadow-2xl">
+                <img th:src = "@{/Images/resume7.png}" alt="24/7 Support" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">University student</h2>
+                <p class="text-gray-600">Build the most professional resume using our pre-built exceptional templates. Take one of these templates selected resume.</p>
+            <a class="btn btn-sm btn-primary" th:href="@{'/user/resume02/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6 shadow-2xl">
+                <img th:src = "@{/Images/resume12.jpg}" alt="Easy Returns" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Fresher Resume</h2>
+                <p class="text-gray-600">Resume Builder for High School Students. Easily Create a Teen Resume That Highlights Your High School Activities and Achievements.</p>
+                <a class="btn btn-sm btn-primary" th:href="@{'/user/resume03/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 shadow-2xl">
+                <img th:src = "@{/Images/resume6.jpeg}" alt="Easy Returns" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">College student</h2>
+                <p class="text-gray-600">Land your dream job or gig to build experience with Canva's high school resume templates to customize and print your resume.</p>
+                <a class="btn btn-sm btn-primary" th:href="@{'/user/resume04/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 shadow-2xl">
+                <img th:src = "@{/Images/resume5.jpg}" alt="Easy Returns" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Fresher Resume</h2>
+                <p class="text-gray-600">How to Write a High School Student Resume · 1. Write a dynamic profile summarizing your qualifications·</p>
+                <a class="btn btn-sm btn-primary" th:href="@{'/user/resume05/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+        </section>
+        <nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+  <a class="navbar-brand" href="#" style="font-size: 24px; font-weight: bold;">School Level</a>
+
+</nav>
+<!--        school level-->
+                <section class="pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white rounded-lg p-6   shadow-2xl  ">
+                <img th:src = "@{/Images/resume3.jpg}" alt="Free Shipping" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Free Shipping</h2>
+                <p class="text-gray-600">We offer free shipping on all orders over $50. Enjoy hassle-free delivery to your doorstep.</p>
+            <a class="btn btn-sm btn-primary" th:href="@{'/user/resume06/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6 shadow-2xl">
+                <img th:src = "@{/Images/resume2.jpg}" alt="24/7 Support" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">24/7 Customer Support</h2>
+                <p class="text-gray-600">Entry-Level Cover Letter: Writing a Cover Letter With No Experience/p>
+            <a class="btn btn-sm btn-primary" th:href="@{'/user/resume07/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6 shadow-2xl">
+                <img th:src = "@{/Images/resume1.jpg}" alt="Easy Returns" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">February 24, 2020 | By Lauren McAdams</h2>
+                <p class="text-gray-600">Resume Education Section: How to List Education on a Resume</p>
+            <a class="btn btn-sm btn-primary" th:href="@{'/user/resume08/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 shadow-2xl">
+                <img th:src = "@{/Images/resume10.jpg}" alt="Easy Returns" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">February 24, 2020 | By Lauren McAdams</h2>
+                <p class="text-gray-600">Resume Education Section: How to List Education on a Resume</p>
+            <a class="btn btn-sm btn-primary" th:href="@{'/user/resume09/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 shadow-2xl">
+                <img th:src = "@{/Images/resume13.jpg}" alt="Easy Returns" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">February 24, 2020 | By Lauren McAdams</h2>
+                <p class="text-gray-600">Resume Education Section: How to List Education on a Resume</p>
+            <a class="btn btn-sm btn-primary" th:href="@{'/user/resume10/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+        </section>
+
+<nav id="navbar-example2" class="navbar navbar-light bg-light px-3">
+  <a class="navbar-brand" href="#" style="font-size: 24px; font-weight: bold;">Professional</a>
+
+</nav>
+<!--professional-->
+  <section class="pt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-white rounded-lg p-6   shadow-2xl  ">
+                <img th:src = "@{/Images/resume11.png}" alt="Free Shipping" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">Free Shipping</h2>
+                <p class="text-gray-600">We offer free shipping on all orders over $50. Enjoy hassle-free delivery to your doorstep.</p>
+            <a class="btn btn-sm btn-primary" th:href="@{'/user/resume11/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-white rounded-lg shadow-md p-6 shadow-2xl">
+                <img th:src = "@{/Images/resume12.png}" alt="24/7 Support" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">24/7 Customer Support</h2>
+                <p class="text-gray-600">Entry-Level Cover Letter: Writing a Cover Letter With No Experience/p>
+           <a class="btn btn-sm btn-primary" th:href="@{'/user/resume12/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-white rounded-lg shadow-md p-6 shadow-2xl">
+                <img th:src = "@{/Images/resume13.png}" alt="Easy Returns" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">February 24, 2020 | By Lauren McAdams</h2>
+                <p class="text-gray-600">Resume Education Section: How to List Education on a Resume</p>
+           <a class="btn btn-sm btn-primary" th:href="@{'/user/resume13/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 shadow-2xl">
+                <img th:src = "@{/Images/resume14.png}" alt="Easy Returns" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">February 24, 2020 | By Lauren McAdams</h2>
+                <p class="text-gray-600">Resume Education Section: How to List Education on a Resume</p>
+            <a class="btn btn-sm btn-primary" th:href="@{'/user/resume14/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+            <div class="bg-white rounded-lg shadow-md p-6 shadow-2xl">
+                <img th:src = "@{/Images/resume15.png}" alt="Easy Returns" class="w-full h-32 object-cover rounded-md mb-4">
+                <h2 class="text-2xl font-bold text-gray-800 mb-2">February 24, 2020 | By Lauren McAdams</h2>
+                <p class="text-gray-600">Resume Education Section: How to List Education on a Resume</p>
+            <a class="btn btn-sm btn-primary" th:href="@{'/user/resume15/'+${stp.r_id}}" style="width: 93px;">View</a>
+      
+            </div>
+        </section>
+    </main>
+    
+
+
+
+
+   </div>	
+   
+  </p>
+ 
+</div>
+  
+  
+
+   
+   
+   			
+</div>
+</div>
+
+</tr>	
+					</tbody>
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+.res{
+            width: 650px;
+           margin-left: 350px;
+        }
+        .res h1{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            border: 4px solid black;
+            background: gray;
+
+        }
+        .res .main span{
+			font-size: 30px;
+		}
+        .res h2{
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            
+            background: gray;
+        }
+        .res .main{
+            font-size: 15px;
+            font-weight: bold;
+            line-height:5px;
+        }
+        .res .exp{
+            font-size: 15px;
+            font-weight: bold;
+            }

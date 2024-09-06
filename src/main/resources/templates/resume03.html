@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    
+    
+    <title>Resume</title>
+  
+   
+    
+    <link rel="stylesheet" th:href="@{/css/resthree.css}">
+</head>
+<body>
+	
+	<button class="btn btn-outline-primary" onclick="print()"
+					style="width: 80px; margin-left: 990px;margin-top: 10px; color: rgb(0, 0, 64);">Print</button>
+   
+	
+     <div class="res">
+        <h1>Resume</h1>
+        <div class="main">
+            <span>[[${res.name}]]</span>
+            <p>Address:[[${res.address}]]</p>
+            <p>City:[[${res.city}]]</p>
+            <p>PIN:[[${res.pin}]] </p>
+            <p>Email:[[${res.email}]]</p>
+            <p>linkedin:[[${res.linkden}]]</p>
+            <p>DOB:[[${res.date}]]</p>
+
+            
+        </div>
+        <div class="obj">
+            <h2>Objective</h2>
+            <p>[[${res.objtive}]].</p>
+        </div>
+        <div class="edu">
+            <h2>Eduction</h2>
+            <b>High School Passed:</b> - <span><br>
+                School Name: [[${res.shlname1}]]</span>
+                <span><br>
+                High School Marks: [[${res.tenthmarks}]]</span>
+                <br>
+                 <b>Senior Secondry School Passed:</b> - <span><br>
+                School Name: [[${res.shlname2}]]</span>
+                <span><br>
+                Senior Secondry School Marks: [[${res.tewltmarks}]]</span>
+                  <span><br>
+                Graduated Course: [[${res.degreename}]] from [[${res.U_name}]]</span>
+                <span><br>
+                CGPA: [[${res.degree_marks}]]</span>
+                 
+        </div>
+        <div class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>[[${res.skills}]]</li>
+            </ul>
+        </div>
+        <div class="exp">
+            <h2>Experience</h2>
+            <p>Company Name:[[${res.C_name}]]</p>
+            <p>Location:[[${res.joblocation}]]</p>
+        </div>
+        <div class="exp">
+            <h2>Projects</h2>
+            <ul>
+                <li>[[${res.project}]]</li>
+            </ul>
+        </div>
+<div class="exp">
+            <h2>Achivements</h2>
+            <ul>
+                <li>[[${res.achivement}]]</li>
+            </ul>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

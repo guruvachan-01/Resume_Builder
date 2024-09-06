@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Resume</title>
+    <link rel="stylesheet" th:href="@{/css/restwo.css}">
+</head>
+<body>
+	
+	<button class="btn btn-outline-primary" onclick="print()"
+					style="width: 80px; margin-left: 990px;margin-top: 10px; color: rgb(0, 0, 64);">Print</button>
+    <div class="outer" style="padding: 20px;">
+		
+		<h2 style="text-align: center; font-size: 30px;">Resume</h2>
+        <div class="left-container">
+        <h1>[[${res.name}]]</h1>
+        <h2>Fresher Student Based</h2>
+       
+        <p class="guru">Email: [[${res.email}]]</p>
+        <p class="guru">Linkedin: [[${res.linkden}]]</p>
+        <p class="guru">DOB: [[${res.date}]]</p>
+        <p class="vachan">Contact: [[${res.mobile}]]</p>
+         <p class="vac">Address: [[${res.address}]]</p>
+          <p class="vac">City: [[${res.city}]]</p>
+           <p class="vac">State: [[${res.state}]]</p>
+            <p class="vac">ZIP: [[${res.pin}]]</p>
+        <div class="line">
+        <h2 id="pro">PROJECTS</h2>
+        <hr>
+    </div>
+   
+    <p id="red">Project Management</p>
+   
+    <ul class ="list">
+      <h4>[[${res.project}]]</h4>
+      <li>[[${res.project}]]</li>
+    
+      
+</ul>
+ <div class="line4">
+            <h2 id="pro">Objective</h2>
+            <hr>
+        </div>
+
+        <li>[[${res.objtive}]]</li>
+
+<div class="line4">
+            <h2 id="pro">Experience</h2>
+            <hr>
+        </div>
+
+        <li>[[${res.expe}]]</li>
+
+
+
+        </div>
+        
+<div class="right-container">
+
+    
+    <div class="line2">
+        <h2 id="pro">EDUCATION</h2>
+        <hr>
+    </div>
+    <p>High school Passed</p>
+    <p id="red">[[${res.shlname1}]]</p>
+  
+    <p>GPA:[[${res.tenthmarks}]]</p>
+<br>
+<p>Senior Secondry School</p>
+    <p id="red">[[${res.shlname2}]]</p>
+  
+    <p>GPA:[[${res.tewltmarks}]]</p>
+    <br>
+    <p>Graduation</p>
+    <p id="red">[[${res.degreename}]] from [[${res.U_name}]]</p>
+  
+    <p>GPA:[[${res.degree_marks}]]</p>
+
+    <div class="line3">
+        <h2 id="pro">SKILLS</h2>
+        <hr>
+    </div>
+    
+        <li>[[${res.skills}]]</li>
+       
+
+        <div class="line4">
+            <h2 id="pro">HOBBIES</h2>
+            <hr>
+        </div>
+
+        <li>[[${res.hobbis}]]</li>
+        
+    
+</div>
+
+    </div>
+</body>
+</html>

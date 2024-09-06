@@ -1,0 +1,32 @@
+.outer{
+    width: 700px;
+    height: 1000px;
+    
+    margin: 0px auto
+}
+#std{
+    font-weight: 100; 
+}
+
+#line{
+
+   background-color: green;
+    width: 700px;
+    height: 10px;
+    margin:auto;
+    
+
+
+}
+
+h2{
+    
+    color: green;
+   
+}
+
+span{
+    font-style: italic;
+    color: rgb(87, 85, 85);
+
+}

@@ -1,0 +1,24 @@
+ .allres{
+            width: 650px;
+           margin-left: 350px;
+        }
+        
+        .allres .top{
+            
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            line-height: 15px;
+        }
+       .allres header{
+       text-align: center;
+       background: rgb(17, 121, 241);
+       border: 3px solid black;
+       font-size: 30px;
+       color: white;
+
+       }
+        .allres hr{
+            height: 2px;
+            background: rgb(30, 122, 243);
+        }

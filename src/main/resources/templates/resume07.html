@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" th:href="@{/css/resseven.css}">
+</head>
+<body>
+	<button class="btn btn-outline-primary" onclick="print()"
+					style="width: 80px; margin-left: 990px;margin-top: 10px; color: rgb(0, 0, 64);">Print</button>
+   
+ <div class="allres">
+        <header>Resume</header>
+        <div class="top">
+            <h1>[[${res.name}]]</h1>
+            <h3>Street Address[[${res. address}]]</h3>
+            <h4>City: [[${res. city}]]</h4>
+            <h4>PIN: [[${res. pin}]]</h4>
+            <h4>Contact: [[${res.mobile}]]</h4>
+            <h4>Email:  [[${res.email}]]</h4>
+        </div>
+        <h2>Work Experience</h2>
+        <hr>
+        <p><b>Campany Name:</b> 
+            <ul>
+                <li>[[${res.C_name}]]</li>
+            </ul> </p>
+            <p><b>Campany Location:</b> [[${res.joblocation}]]</p>
+
+
+            <h2>Eduction</h2>
+            <hr>
+            <p><b>School Name:</b>  <ul>
+                <li>[[${res.shlname1}]]</li>
+                <li>[[${res.tenthmarks}]]</li>
+            </ul> </p>
+
+
+            <h2>Trade Certifications/Licenses/Academic Achivements</h2>
+            <hr>
+            <ul>
+                <li> [[${res. achivement}]]</li>
+            </ul>
+
+            <h2>Skills</h2>
+            <hr>
+            <ul>
+                <li>[[${res. skills}]]</li>
+            </ul>
+
+            <h2>Hobbies</h2>
+            <hr>
+            <ul>
+                <li>[[${res.hobbis}]] </li>
+            </ul>
+
+    </div>
+</body>
+</html>

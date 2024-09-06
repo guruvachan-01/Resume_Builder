@@ -1,0 +1,29 @@
+.top{
+            width: 650px;
+           margin-left: 350px;
+      border: 3px solid rgb(104, 119, 44);
+      padding: 15px 15px ;
+        }
+        .top h1{
+            text-align: center;
+            background: rgb(121, 140, 44);
+            color: white;
+            height: 50px;
+            padding-top: 10px;
+        }
+        .top h3{
+            background: rgb(121, 140, 34);
+            padding-left: 18px;
+        }
+        hr{
+            height: 3px;
+            background: rgba(190, 242, 47, 0.547);
+        }
+        .top .menu .con{
+  padding-right: 74px;
+    margin-top: 2px;
+    float: right;
+        }
+        .menu{
+            padding-bottom: 6px;
+        }

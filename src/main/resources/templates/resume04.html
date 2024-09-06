@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    
+    
+    <title>Resume</title>
+   
+   
+    
+    <link rel="stylesheet" th:href="@{/css/resfour.css}">
+</head>
+<body>
+	
+	<button class="btn btn-outline-primary" onclick="print()"
+					style="width: 80px; margin-left: 990px;margin-top: 10px; color: rgb(0, 0, 64);">Print</button>
+   
+	  <div class="outer">
+<div class="title">
+    <h3>Student Resume</h3>
+    <p>Address.:[[${res.pin}]], [[${res.state}]], [[${res.city}]]</p>
+    <p>Mobile No.:[[${res.mobile}]]</p>
+    <p>E-Mail:[[${res.email}]]</p>
+</div>
+<div class="info">
+    <h3>PERSONAL INFORMATION</h3>
+    <div class="add">
+    <P>Full Name: [[${res.name}]]</P>
+  
+    <p>Date of Birth: [[${res.date}]]</p>
+   <p>Linkedin: [[${res.linkden}]]</p>
+  
+    <p>Address: [[${res.address}]]</p>
+    <p>Father Name:[[${res.father}]]</p>
+     <p>Father Name:[[${res.mother}]]</p>
+</div><BR>
+<h3>CAREER OBJECTIVE</h3>
+<div class="add">
+    <p>
+       [[${res.objtive}]]
+    </p>
+</div>
+</div><BR>
+<h3>EDUCATION BACKGROUND</h3>
+<div class="add">
+    <p>High school Passed</p>
+    <p id="red">[[${res.shlname1}]]</p>
+  
+    <p>GPA:[[${res.tenthmarks}]]</p>
+<br>
+<p>Senior Secondry School</p>
+    <p id="red">[[${res.shlname2}]]</p>
+  
+    <p>GPA:[[${res.tewltmarks}]]</p>
+    <br>
+    
+</div><br>
+<h3>SUMMARY OF QUALIFICATIONS</h3>
+<div class="add">
+   <p>Graduation</p>
+    <p id="red">[[${res.degreename}]] from [[${res.U_name}]]</p>
+  
+    <p>GPA:[[${res.degree_marks}]]</p>
+</div>
+<h3>Career Skills</h3>
+<div class="add">
+    <p>
+        Skills:[[${res.skills}]]
+    </p>
+</div><br>
+<h3>Building Projects</h3>
+<div class="add">
+    <p>
+        [[${res.project}]]
+    </p>
+</div><br>
+<h3>WORK EXPERIENCE</h3>
+<div class="add">
+   
+    <p>Campany Name:[[${res.C_name}]]</p>
+    <p>Location:[[${res.joblocation}]]</p>
+
+</div>
+    </div>
+
+
+</body>
+</html>

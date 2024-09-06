@@ -1,0 +1,66 @@
+ .msg{
+            width: 650px;
+           margin-left: 350px;
+          border-top: 9px solid rgb(4, 14, 80);
+        }
+        
+        .msg h1{
+            text-align: center;
+            color: rgb(3, 27, 71);
+        }
+        .msg h3{
+            text-align: center;
+            color: gray;
+         border-bottom: 4px solid rgb(5, 21, 86);
+         padding-bottom: 9px;
+         border-width: 3px;
+        
+            
+        }
+         .obj h4{
+            display:inline;
+           align-content: space-evenly;
+           padding-left:160px;
+           
+            color: rgb(3, 27, 71);
+       
+        }
+        .ed h3{
+            display:inline;
+           align-content: space-between;
+       color: rgb(3, 27, 71);
+
+        }
+        .ed b{
+           
+padding-left: 80px;
+        }
+        .ed p{
+            line-height: 3px;
+            padding-left: 120px;
+        }
+        .work h3{
+            display:inline;
+           align-content: space-between;
+       color:rgb(3, 27, 71);
+       
+        }
+        .work b {
+            padding-left: 80px;
+        }
+        .work p{
+            line-height: 13px;
+            padding-left: 120px;
+        }
+        .skills h3 {
+            display:inline;
+           align-content: space-between;
+       color: rgb(3, 27, 71);
+       
+        }
+        .hoby h3{
+            display:inline;
+           align-content: space-between;
+       color: rgb(3, 27, 71);
+       
+        }

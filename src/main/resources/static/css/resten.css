@@ -1,0 +1,33 @@
+  *{
+    padding: 0px;
+    margin: 0px;
+} 
+.outer{
+    width: 700px;
+    height: 600px;
+    
+    margin: 0px auto; 
+}
+.container{
+    height: 150px;
+    width: 600px;
+}
+table{
+	width: 100%;
+}
+H3{
+    
+    margin-top: 20px;
+}
+.col-right{
+    float: right;
+}
+.line{
+    height: 1px;
+    
+    background: black;
+}
+
+ul,p{
+    margin-left: 50px;
+}

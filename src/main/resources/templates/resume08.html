@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" th:href="@{/css/reseath.css}">
+</head>
+<body>
+	<button class="btn btn-outline-primary" onclick="print()"
+					style="width: 80px; margin-left: 990px;margin-top: 10px; color: rgb(0, 0, 64);">Print</button>
+   
+ <div class="top">
+        <h1>CURRICULUM VITAE</h1>
+        <div class="main">
+            <h4>Name: [[${res.name}]]</h4>
+            <h5>Address:[[${res.address}]]</h5>
+            <h5>City:[[${res.city}]]</h5>
+            <h5>ZIP:[[${res.pin}]]</h5>
+            <h5>Contact:[[${res.mobile}]]</h5>
+            <h5>E-mail:[[${res.email}]]</h5>
+        </div>
+        <hr>
+        <div class="obj">
+            <h3>Career Objective</h3>
+            <p>[[${res.objtive}]]</p>
+        </div>
+        <div class="acd">
+            <h3>Academic Details</h3>
+            <h4>High School Passout:</h4>
+           <ul>
+			   <li> <p>[[${res.shlname1}]]</p>
+            
+            </li>
+            <li><p>[[${res.tenthmarks}]]</p></li>
+		   </ul>
+        </div>
+        <div class="skills">
+            <h3>Skills</h3>
+            <ul>
+                <li>[[${res.skills}]]</li>
+            </ul>
+        </div>
+
+        <div class="hoby">
+            <h3>Hobbies & Interests</h3>
+            <ul>
+                <li>[[${res.hobbis}]]</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

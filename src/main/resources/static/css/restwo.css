@@ -1,0 +1,72 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.outer{
+    width: 700px;
+    height: 1200px;
+    border: 1px solid black;
+    margin: 0px auto;
+}
+
+.left-container{
+    width: 350px;
+    height: 1000px;
+   
+    margin-top: 30px;
+    float: left;
+}
+
+h2{
+    color: orangered;
+    margin-top: 2px;
+}
+
+.guru{
+   float: left;
+   width: 50%;
+  
+  
+}
+.vachan{
+    float: right;
+    width: 50%;
+}
+hr{
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    
+}
+.line{
+    margin-top: 80px;
+    
+}
+#pro{
+    color: black;
+}
+
+.right-container{
+    width: 300px;
+    height: 800px;
+    
+    margin-top: 30px;
+    float: right;
+}
+#loc{
+    margin-top: 65px;
+    margin-left: 30px;
+}
+.line2{
+    margin-top: 63px;
+}
+
+.line3, .line4{
+    margin-top: 40px;
+}
+.list{
+    margin-left: 20px;
+}
+#red{
+    color: orangered;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+ <link rel="stylesheet" th:href="@{/css/resthrty.css}">
+</head>
+<body>
+
+	<button class="btn btn-outline-primary" onclick="print()"
+					style="width: 80px; margin-left: 990px;margin-top: 10px; color: rgb(0, 0, 64);">Print</button>
+   
+	 <div class="outer">
+		
+   <div id="line">  <h1>Resume</h1></div>
+ 
+       <h1>[[${res.name}]]</h1>
+      <h2 id="std">High School Student</h2>
+
+<div id= "address">
+ 
+    <li style="list-style: none; word-spacing: 5px; "> City:	<a>[[${res.city}]]</a></li>
+						<li style="list-style: none; word-spacing: 5px; "> State:	<a>[[${res.state}]]</a></li>
+   <li style="list-style: none; word-spacing: 5px; " > ZIP:<a>[[${res.pin}]]</a> </li>
+						<li style="list-style: none; word-spacing: 5px;"> Email:	<a>[[${res.email}]]</a>  </li>
+</div>
+<h2>Objective</h2>
+<hr>
+<p>[[${res.objtive}]]</p> 
+
+<h2>SKILLS</h2>
+<hr>
+<p>[[${res.skills}]]</p>  
+<h2>EXPERIENCE</h2>
+<hr>
+<div id="location">
+<b>Company Name: [[${res.C_name}]]</b> - <span>Job Location<br>
+[[${res.joblocation}]]</span>
+
+
+</div>
+
+    
+        <h2>EDUCATION</h2>
+        <hr>
+        <div id="location">
+            <b>High School Passed:</b> - <span><br>
+           School Name: [[${res.shlname1}]]</span>
+           <span><br>
+           High School Marks: [[${res.tenthmarks}]]</span>
+           <br>
+            <b>Senior Secondry School Passed:</b> - <span><br>
+           School Name: [[${res.shlname2}]]</span>
+           <span><br>
+           Senior Secondry School Marks: [[${res.tewltmarks}]]</span>
+             <span><br>
+           Graduated Course: [[${res.degreename}]] from [[${res.U_name}]]</span>
+           <span><br>
+           CGPA: [[${res.degree_marks}]]</span>
+            
+            
+           
+           <div>
+            
+    <h2>AWARDS</h2>
+    <hr>
+    <P> Achivement: [[${res.achivement}]]</P>
+</div>
+</div>
+
+</body>
+</html>
